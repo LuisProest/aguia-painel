@@ -1,0 +1,10 @@
+# Cabeçalhos de segurança do painel (formato aceito por Cloudflare Pages e Netlify).
+# O painel só conversa com o Supabase e só busca imagem de satélite do serviço de mapas.
+/*
+  Content-Security-Policy: default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob: https://server.arcgisonline.com; connect-src 'self' https://*.supabase.co wss://*.supabase.co https://server.arcgisonline.com; worker-src 'self' blob:; frame-ancestors 'none'; base-uri 'self'; form-action 'self'
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: DENY
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: geolocation=(self), camera=(), microphone=()
+  Strict-Transport-Security: max-age=31536000; includeSubDomains
+  X-Robots-Tag: noindex
